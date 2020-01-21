@@ -26,7 +26,7 @@ def verify_container(container):
 
 def test_env_vars_2():
     name = os.getenv("NAME")
-    image = f"tiangolo/uvicorn-gunicorn:{name}"
+    image = f"privateamerica/uvicorn-gunicorn-docker:{name}"
     sleep_time = int(os.getenv("SLEEP_TIME", 1))
     time.sleep(sleep_time)
     remove_previous_container(client)
